@@ -9,6 +9,10 @@ import f4 from "./assets/f4.png";
 import fa1 from "./assets/fa1.png";
 import fa2 from "./assets/fa2.png";
 import fa3 from "./assets/fa3.png";
+import fe1 from "./assets/fe-1.png";
+import fe2 from "./assets/fe-2.png";
+import fe3 from "./assets/fe-3.png";
+import fe4 from "./assets/fe-4.png";
 import hcPic1 from "./assets/hc-pic1.PNG";
 import hcPic2 from "./assets/hc-pic2.PNG";
 import hcPic3 from "./assets/hc-pic3.PNG";
@@ -19,6 +23,11 @@ import km4 from "./assets/km4.png";
 import sm1 from "./assets/sm1.png";
 import sm2 from "./assets/sm2.png";
 import sm3 from "./assets/sm3.png";
+import vrh1 from "./assets/vrh-1.png";
+import vrh2 from "./assets/vrh-2.png";
+import vrh3 from "./assets/vrh-3.png";
+import vrh4 from "./assets/vrh-4.png";
+import vrh5 from "./assets/vrh-5.png";
 import cvmLogo from "./assets/cvm.png";
 import jjisLogo from "./assets/jjis.png";
 import heroPortrait from "./assets/me.jpg";
@@ -27,9 +36,11 @@ import jpLogo from "./assets/jp.png";
 const PROJECT_IMAGES = {
   fa: [fa1, fa2, fa3],
   f: [f1, f2, f3, f4],
+  fe: [fe1, fe2, fe3, fe4],
   hc: [hcPic1, hcPic2, hcPic3],
   km: [km1, km2, km3, km4],
   sm: [sm1, sm2, sm3],
+  vrh: [vrh1, vrh2, vrh3, vrh4, vrh5],
 };
 
 // EmailJS configuration - Load from .env file
@@ -46,6 +57,22 @@ const PROJECT_CATEGORIES = [
   "Data & Analytics",
 ];
 
+const EXPERIENCE = [
+  {
+    id: 1,
+    position: "UI/UX Design Intern",
+    company: "Venom Technology",
+    companyUrl: "https://www.venomtechnologies.in/",
+    location: "Anand",
+    timeline: "15 days(2025)",
+    responsibilities: [
+      "Created wireframes, modern UI screens, and interactive prototypes using Figma.",
+      "Worked on layout structuring, component design, spacing systems, and user flow optimization.",
+      "Collaborated with the design team in fast-paced tasks, improving visual hierarchy and usability.",
+    ],
+  },
+];
+
 const EDUCATION = [
   {
     id: 1,
@@ -53,7 +80,7 @@ const EDUCATION = [
     institution: "Madhuben & Bhanubhai Patel Institute of Technology",
     university: "CVM University, V.V. Nagar",
     timeline: "2022 – 2026",
-    stats: ["CGPA: 6.93 / 10"],
+    stats: ["CGPA: 7.15 / 10"],
     logo: cvmLogo,
     logoAlt: "CVM University logo",
   },
@@ -71,6 +98,22 @@ const EDUCATION = [
 const PROJECTS = [
   {
     id: 1,
+    title: "Flipkart Mobile Sales Data Visualization & Price Prediction",
+    category: "Data & Analytics",
+    shortDesc:
+      "Comprehensive data analysis and predictive modeling on mobile phone sales data with interactive visualizations.",
+    tech: ["Python", "Pandas", "Matplotlib", "Scikit-learn", "Jupyter"],
+    timeline: "2025",
+    role: "Data Analyst & ML Engineer",
+    highlights: [
+      "Analyzed Flipkart mobile sales dataset to uncover pricing trends, brand performance, and market insights.",
+      "Created interactive visualizations for price distribution, specifications correlation, and sales patterns.",
+      "Developed predictive models using machine learning algorithms to forecast mobile phone prices.",
+      "Generated actionable insights on feature importance and market segmentation for pricing strategies.",
+    ],
+  },
+  {
+    id: 2,
     title: "FlightAware – Travel Booking Web Platform",
     category: "UI/UX",
     shortDesc:
@@ -86,7 +129,24 @@ const PROJECTS = [
     ],
   },
   {
-    id: 2,
+    id: 3,
+    title: "foodieExpress – Food Delivery Mobile App",
+    category: "Mobile Apps",
+    shortDesc:
+      "Modern food delivery platform UI with restaurant discovery, menu browsing, cart management, and real-time order tracking.",
+    tech: ["Figma", "Mobile UI", "Prototyping"],
+    timeline: "2025",
+    role: "UI/UX Designer",
+    imagesKey: "fe",
+    highlights: [
+      "Designed intuitive restaurant discovery with search, filters, ratings, and quick restaurant cards.",
+      "Created seamless menu browsing experience with food categorization, descriptions, prices, and food images.",
+      "Built smooth cart and checkout flow with item customization, quantity selection, and secure payment options.",
+      "Implemented real-time order tracking screen with delivery progress, estimated arrival, and live location updates.",
+    ],
+  },
+  {
+    id: 4,
     title: "Frutify – Fresh Fruits & Juice Ordering App",
     category: "Mobile Apps",
     shortDesc:
@@ -102,7 +162,7 @@ const PROJECTS = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "HobbyClass – Online Hobby Learning Website",
     category: "UI/UX",
     shortDesc:
@@ -118,7 +178,7 @@ const PROJECTS = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "KrishiMitra – Farmer-to-Consumer Ecommerce App",
     category: "Mobile Apps",
     shortDesc:
@@ -134,7 +194,7 @@ const PROJECTS = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "StayMajestic – Hotel Booking Website",
     category: "Web Development",
     shortDesc:
@@ -147,6 +207,23 @@ const PROJECTS = [
       "Composed dark hero banner, membership CTA, and destination cards to feel luxurious.",
       "Blended location-based search, modern layouts, and smooth spacing for clarity.",
       "Added FAQ accordion and curated content blocks to keep the experience concise yet rich.",
+    ],
+  },
+  {
+    id: 8,
+    title: "Vintage Rides Hub – Car Rental & Sales Platform",
+    category: "Web Development",
+    shortDesc:
+      "Full-stack car marketplace with rental, buying, selling, and price prediction features powered by machine learning.",
+    tech: ["React", "Python", "Flask", "ML", "Data Analytics"],
+    timeline: "2025",
+    role: "Full Stack Developer",
+    imagesKey: "vrh",
+    highlights: [
+      "Developed integrated platform for car rentals, purchases, and sales with seamless user workflows.",
+      "Built ML-powered price prediction model for accurate vehicle valuations using historical data.",
+      "Implemented search, filtering, and booking modals with real-time inventory management.",
+      "Created responsive React UI with context API for state management and dynamic car listings.",
     ],
   },
 ];
@@ -279,6 +356,7 @@ function App() {
         </div>
         <nav className="nav-links">
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -295,9 +373,9 @@ function App() {
           <h1>
             Hi, I’m <span className="highlight">Jignesh Prajapati</span>
           </h1>
-          <h2>Frontend Developer & UI/UX Enthusiast</h2>
+          <h2>Full Stack Developer, UI/UX Designer & Python Enthusiast</h2>
           <p className="hero-subtitle">
-            I am the type of Designer who enjoys turning ideas into smooth, modern digital experiences. With hands-on experience in designing full web and mobile interfaces
+            I craft seamless digital experiences through web development, intuitive UI/UX design, and data-driven solutions. Passionate about building real-world applications with React, Python, and machine learning.
           </p>
 
           <div className="hero-actions">
@@ -336,9 +414,7 @@ function App() {
       <section id="about" className="section about">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">
-          I'm a student and self-driven learner focusing on frontend development, UI/UX design,
-          and basic data analytics. I enjoy working on real-world style projects like exam
-          analysis, portfolio design, and mobile-first app experiences.
+          Aspiring Python Developer with hands-on experience in building data-driven and machine learning–based projects. I combine technical expertise in web development, UI/UX design, and Python to create impactful digital solutions. From designing intuitive mobile interfaces to developing full-stack applications with ML-powered features, I'm driven by the challenge of solving real-world problems through technology.
         </p>
 
         {/* Education Section */}
@@ -371,19 +447,64 @@ function App() {
           <div className="about-card">
             <h3>What I Do</h3>
             <ul>
-              <li>Design clean UI/UX in Figma for web & mobile.</li>
-              <li>Build responsive web pages using HTML, CSS, JavaScript & React.</li>
-              <li>Analyze small datasets and create simple visual summaries.</li>
+              <li>Design modern UI/UX interfaces in Figma for web & mobile apps.</li>
+              <li>Build responsive full-stack applications with React, Python & Flask.</li>
+              <li>Develop ML models for price prediction and data-driven insights.</li>
+              <li>Analyze complex datasets and create interactive visualizations.</li>
             </ul>
           </div>
           <div className="about-card">
-            <h3>Current Focus</h3>
+            <h3>Currently Learning</h3>
             <ul>
-              <li>Improving portfolio & case study presentations.</li>
-              <li>Practicing React and component-based design.</li>
-              <li>Studying fundamentals of data science & ML.</li>
+              <li>Advanced Python & machine learning algorithms.</li>
+              <li>Building scalable full-stack applications with React & backend frameworks.</li>
+              <li>Data visualization and exploratory data analysis techniques.</li>
+              <li>Cloud deployment and database optimization.</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="section experience">
+        <h2 className="section-title">Experience</h2>
+        <p className="section-subtitle">
+          Professional experience in design, development, and collaboration.
+        </p>
+
+        <div className="timeline">
+          {EXPERIENCE.map((exp) => (
+            <article key={exp.id} className="timeline-item">
+              <div className="timeline-content">
+                <div className="experience-header">
+                  <div>
+                    <h3 className="experience-position">{exp.position}</h3>
+                    <p className="experience-company">
+                      <span
+                        className="company-link"
+                        onClick={() => window.open(exp.companyUrl, "_blank")}
+                        role="button"
+                        tabIndex="0"
+                        onKeyDown={(e) =>
+                          e.key === "Enter" &&
+                          window.open(exp.companyUrl, "_blank")
+                        }
+                      >
+                        {exp.company}
+                      </span>
+                      • {exp.location}
+                    </p>
+                  </div>
+                  <span className="experience-timeline">{exp.timeline}</span>
+                </div>
+                <ul className="experience-list">
+                  {exp.responsibilities.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
