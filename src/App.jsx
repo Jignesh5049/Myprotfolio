@@ -373,7 +373,7 @@ function App() {
           <h1>
             Hi, I’m <span className="highlight">Jignesh Prajapati</span>
           </h1>
-          <h2>Full Stack Developer, UI/UX Designer & Python Enthusiast</h2>
+          <h2>Frontend Developer & UI/UX Designer & Python Enthusiast</h2>
           <p className="hero-subtitle">
             I craft seamless digital experiences through web development, intuitive UI/UX design, and data-driven solutions. Passionate about building real-world applications with React, Python, and machine learning.
           </p>
@@ -414,7 +414,7 @@ function App() {
       <section id="about" className="section about">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">
-          Aspiring Python Developer with hands-on experience in building data-driven and machine learning–based projects. I combine technical expertise in web development, UI/UX design, and Python to create impactful digital solutions. From designing intuitive mobile interfaces to developing full-stack applications with ML-powered features, I'm driven by the challenge of solving real-world problems through technology.
+          Aspiring Python Developer with hands-on experience in building data-driven and machine learning–based projects. I combine technical expertise in web development, UI/UX design, and Python to create impactful digital solutions. From designing intuitive mobile interfaces to developing full-stack applications with ML-powered features, I'm driven by the challenge of solving real-world problems through technology
         </p>
 
         {/* Education Section */}
