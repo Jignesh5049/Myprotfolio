@@ -60,11 +60,25 @@ const PROJECT_CATEGORIES = [
 const EXPERIENCE = [
   {
     id: 1,
+    position: "Flutter Developer Intern",
+    company: "TenUp Software Service",
+    companyUrl: "https://www.tenupsoft.com/",
+    location: "Vadodara",
+    timeline: "Jan 2026 – Present",
+    responsibilities: [
+      "Developing cross-platform mobile applications using Flutter and Dart framework.",
+      "Building responsive UI components and implementing state management solutions.",
+      "Collaborating with the development team on real-world client projects and feature implementations.",
+      "Learning best practices for mobile app architecture and clean code principles.",
+    ],
+  },
+  {
+    id: 2,
     position: "UI/UX Design Intern",
     company: "Venom Technology",
     companyUrl: "https://www.venomtechnologies.in/",
     location: "Anand",
-    timeline: "15 days(2025)",
+    timeline: "2025",
     responsibilities: [
       "Created wireframes, modern UI screens, and interactive prototypes using Figma.",
       "Worked on layout structuring, component design, spacing systems, and user flow optimization.",
@@ -235,6 +249,26 @@ function App() {
   const modalGalleryRef = useRef(null);
   const [contactStatus, setContactStatus] = useState({ type: null, message: "" });
   const [contactLoading, setContactLoading] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Handle scroll to show/hide scroll-to-top button
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Page load animation
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const filteredProjects =
     activeCategory === "All"
@@ -260,7 +294,7 @@ function App() {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
-    
+
     const templateParams = {
       from_name: formData.get("name"),
       from_email: formData.get("email"),
@@ -316,7 +350,7 @@ function App() {
     } catch (error) {
       console.error("Contact form error:", error);
       let errorMessage = "Something went wrong. Please try again later.";
-      
+
       // Handle EmailJS specific errors
       if (error.status) {
         if (error.status === 400) {
@@ -337,7 +371,7 @@ function App() {
       } else if (error.message) {
         errorMessage = error.message;
       }
-      
+
       setContactStatus({
         type: "error",
         message: errorMessage,
@@ -348,7 +382,18 @@ function App() {
   };
 
   return (
-    <div className={`portfolio-root ${theme === "dark" ? "theme-dark" : "theme-light"}`}>
+    <div className={`portfolio-root ${theme === "dark" ? "theme-dark" : "theme-light"} ${isLoaded ? "is-loaded" : ""}`}>
+      {/* Scroll to Top Button */}
+      <button
+        className={`scroll-to-top ${showScrollTop ? "visible" : ""}`}
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M18 15l-6-6-6 6" />
+        </svg>
+      </button>
+
       {/* Top Navigation */}
       <header className="portfolio-header">
         <div className="logo">
@@ -392,7 +437,7 @@ function App() {
           <div className="hero-portrait">
             <img src={heroPortrait} alt="Jignesh Prajapati portrait" />
           </div>
-          <p className="hero-pill">Available for Internship & Freelance</p>
+          <p className="hero-pill">Available for Freelance</p>
           <div className="hero-stat-grid">
             <div className="stat-card">
               <span className="stat-number">10+</span>
@@ -510,7 +555,7 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects" className="section projects">
-        <h2 className="section-title">Selected Projects</h2>
+        <h2 className="section-title">My Projects</h2>
         <p className="section-subtitle">
           Explore a curated list of my work across UI/UX, web development, and analytics.
         </p>
@@ -520,9 +565,8 @@ function App() {
           {PROJECT_CATEGORIES.map((cat) => (
             <button
               key={cat}
-              className={`filter-chip ${
-                activeCategory === cat ? "filter-chip-active" : ""
-              }`}
+              className={`filter-chip ${activeCategory === cat ? "filter-chip-active" : ""
+                }`}
               onClick={() => setActiveCategory(cat)}
             >
               {cat}
@@ -538,6 +582,8 @@ function App() {
               className="project-card"
               onClick={() => setSelectedProject(project)}
             >
+              <div className="corner-decor" />
+              <div className="view-indicator">→</div>
               <div className="project-tag">{project.category}</div>
               <h3>{project.title}</h3>
               <p>{project.shortDesc}</p>
@@ -598,7 +644,7 @@ function App() {
       <section id="contact" className="section contact">
         <h2 className="section-title">Let’s Connect</h2>
         <p className="section-subtitle">
-          Open to internships, project collaborations, and UI/UX or frontend opportunities.
+          Open for project collaborations, and UI/UX or frontend opportunities.
         </p>
 
         <div className="contact-grid">

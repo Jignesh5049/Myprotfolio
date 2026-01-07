@@ -1,11 +1,17 @@
+/* =====================================================
+   🌿 GLOBAL STYLES - Earthy Portfolio Theme
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Outfit", "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark light;
+  color: #f5efe8;
+  background-color: #1a1f16;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,54 +21,81 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #99744a;
   text-decoration: inherit;
+  transition: color 0.25s ease;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #dbc2a6;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(180deg, #1a1f16 0%, #0f1310 100%);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 700;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 12px;
+  border: 2px solid rgba(153, 116, 74, 0.3);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(26, 31, 22, 0.8);
+  color: #f5efe8;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #99744a;
+  background: linear-gradient(135deg, #99744a 0%, #b8936a 100%);
+  color: #fff;
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid rgba(153, 116, 74, 0.5);
+  outline-offset: 2px;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #2a3024;
+    background-color: #f5efe8;
   }
+
+  body {
+    background: linear-gradient(180deg, #f5efe8 0%, #efe4d5 100%);
+  }
+
   a:hover {
-    color: #747bff;
+    color: #99744a;
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2a3024;
+    border-color: rgba(65, 74, 55, 0.2);
   }
+}
+
+/* Smooth scroll for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background: rgba(153, 116, 74, 0.4);
+  color: inherit;
 }
