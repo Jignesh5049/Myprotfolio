@@ -245,7 +245,7 @@ const PROJECTS = [
 function App() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const modalGalleryRef = useRef(null);
   const [contactStatus, setContactStatus] = useState({ type: null, message: "" });
   const [contactLoading, setContactLoading] = useState(false);
