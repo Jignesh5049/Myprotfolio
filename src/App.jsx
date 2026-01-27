@@ -28,6 +28,11 @@ import vrh2 from "./assets/vrh-2.png";
 import vrh3 from "./assets/vrh-3.png";
 import vrh4 from "./assets/vrh-4.png";
 import vrh5 from "./assets/vrh-5.png";
+import et1 from "./assets/ET-1.jpeg";
+import et2 from "./assets/ET-2.jpeg";
+import qu1 from "./assets/Qu-1.jpeg";
+import qu2 from "./assets/Qu-2.jpeg";
+import qu3 from "./assets/Qu-3.jpeg";
 import cvmLogo from "./assets/cvm.png";
 import jjisLogo from "./assets/jjis.png";
 import heroPortrait from "./assets/me.jpg";
@@ -41,6 +46,8 @@ const PROJECT_IMAGES = {
   km: [km1, km2, km3, km4],
   sm: [sm1, sm2, sm3],
   vrh: [vrh1, vrh2, vrh3, vrh4, vrh5],
+  et: [et1, et2],
+  qu: [qu1, qu2, qu3],
 };
 
 // EmailJS configuration - Load from .env file
@@ -238,6 +245,40 @@ const PROJECTS = [
       "Built ML-powered price prediction model for accurate vehicle valuations using historical data.",
       "Implemented search, filtering, and booking modals with real-time inventory management.",
       "Created responsive React UI with context API for state management and dynamic car listings.",
+    ],
+  },
+  {
+    id: 9,
+    title: "Expense Tracker – Personal Finance Management App",
+    category: "Mobile Apps",
+    shortDesc:
+      "A Flutter-based expense tracking application with intuitive swipe-to-delete functionality and visual expense analytics through interactive charts.",
+    tech: ["Flutter", "Dart", "Charts", "State Management"],
+    timeline: "2025",
+    role: "Flutter Developer",
+    imagesKey: "et",
+    highlights: [
+      "Built a clean and intuitive mobile app for tracking daily expenses with category-based organization.",
+      "Implemented swipe-to-delete gesture for seamless expense removal with undo functionality.",
+      "Integrated dynamic chart visualization to display spending patterns and expense distribution.",
+      "Developed persistent local storage for expense data with date-wise filtering and sorting capabilities.",
+    ],
+  },
+  {
+    id: 10,
+    title: "Flutter Quiz Master – Interactive Learning App",
+    category: "Mobile Apps",
+    shortDesc:
+      "An engaging quiz application built with Flutter that tests users on Flutter framework knowledge and displays comprehensive results with correct answers.",
+    tech: ["Flutter", "Dart", "Quiz Logic", "UI Animation"],
+    timeline: "2025",
+    role: "Flutter Developer",
+    imagesKey: "qu",
+    highlights: [
+      "Designed an engaging quiz interface with multiple-choice questions focused on Flutter framework concepts.",
+      "Implemented comprehensive result screen showing score, percentage, and detailed answer review.",
+      "Added visual feedback for correct and incorrect answers to enhance the learning experience.",
+      "Built smooth navigation transitions and animated UI elements for an interactive user experience.",
     ],
   },
 ];
