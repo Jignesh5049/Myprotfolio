@@ -40,12 +40,25 @@ function ProjectDetails() {
                         <span className="project-timeline">{project.timeline}</span>
                     </div>
 
-                    <div className="project-tech">
-                        {project.tech.map((tech) => (
-                            <span key={tech} className="tech-pill">
-                                {tech}
-                            </span>
-                        ))}
+                    <div className="project-tech-row">
+                        <div className="project-tech">
+                            {project.tech.map((tech) => (
+                                <span key={tech} className="tech-pill">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+
+                        {project.liveUrl && (
+                            <a
+                                className="btn primary project-live-link"
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Visit Live Site
+                            </a>
+                        )}
                     </div>
                 </div>
                 <div className={`project-hero-media ${project.hasMobileScreenshots ? 'hide-on-mobile' : ''}`}>

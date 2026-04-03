@@ -957,6 +957,36 @@ a {
   margin-bottom: 18px;
 }
 
+.project-tech-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.project-tech-row .project-tech {
+  margin-bottom: 0;
+  flex: 1 1 420px;
+}
+
+.project-live-link {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .project-tech-row {
+    align-items: stretch;
+  }
+
+  .project-live-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .tech-pill {
   border-radius: 10px;
   padding: 8px 16px;

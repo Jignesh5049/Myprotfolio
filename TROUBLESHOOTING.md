@@ -30,9 +30,9 @@ This error means EmailJS cannot find the service with the ID you provided. Here'
 Your `.env` file should look like this (without quotes):
 
 ```env
-VITE_EMAILJS_SERVICE_ID=service_538qscn
-VITE_EMAILJS_TEMPLATE_ID=template_9s5jd36
-VITE_EMAILJS_PUBLIC_KEY=deatPddu4es3yZVFB
+VITE_EMAILJS_SERVICE_ID=service_xxxxxxx
+VITE_EMAILJS_TEMPLATE_ID=template_xxxxxxx
+VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
 ```
 
 **Important:** 

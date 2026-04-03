@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React and Vite, featuring UI/UX projects, skills showcase, and a contact form.
 
-🌐 **Live Site:** [https://jignesh5049.github.io/protfolio/](https://jignesh5049.github.io/protfolio/)
+🌐 **Live Site:** [https://jigneshprotfolio.vercel.app/](https://jigneshprotfolio.vercel.app/)
 
 ## Features
 

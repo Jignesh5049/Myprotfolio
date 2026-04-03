@@ -29,6 +29,19 @@ import et2 from "../assets/ET-2.jpeg";
 import qu1 from "../assets/Qu-1.jpeg";
 import qu2 from "../assets/Qu-2.jpeg";
 import qu3 from "../assets/Qu-3.jpeg";
+import biznest1 from "../../docs/assets/b.png";
+import biznest2 from "../../docs/assets/b1.png";
+import biznest3 from "../../docs/assets/b2.png";
+import bn from "../../docs/assets/bn.jpeg";
+import bn1 from "../../docs/assets/bn1.jpeg";
+import bn2 from "../../docs/assets/bn2.jpeg";
+import bn3 from "../../docs/assets/bn3.jpeg";
+import bn4 from "../../docs/assets/bn4.jpeg";
+import bns from "../../docs/assets/bns.jpeg";
+import bns1 from "../../docs/assets/bns1.jpeg";
+import bns2 from "../../docs/assets/bns2.jpeg";
+import bns3 from "../../docs/assets/bns3.jpeg";
+import bns4 from "../../docs/assets/bns4.jpeg";
 
 export const PROJECT_IMAGES = {
     fa: [fa1, fa2, fa3],
@@ -40,6 +53,9 @@ export const PROJECT_IMAGES = {
     vrh: [vrh1, vrh2, vrh3, vrh4, vrh5],
     et: [et1, et2],
     qu: [qu1, qu2, qu3],
+    biznest: [biznest1, biznest2, biznest3],
+    bn: [bn, bn1, bn2, bn3, bn4],
+    bns: [bns, bns1, bns2, bns3, bns4],
 };
 
 export const PROJECT_CATEGORIES = [
@@ -228,6 +244,63 @@ export const PROJECTS = [
             "Implemented comprehensive result screen showing score, percentage, and detailed answer review.",
             "Added visual feedback for correct and incorrect answers to enhance the learning experience.",
             "Built smooth navigation transitions and animated UI elements for an interactive user experience.",
+        ],
+    },
+    {
+        id: 11,
+        slug: "biznest-business-enablement-platform",
+        title: "BizNest - Business Enablement Platform",
+        category: "Web Development",
+        shortDesc:
+            "A full-stack business enablement platform for small and home-based businesses with dashboards, inventory control, customer management, storefront features, and support tools.",
+        tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+        timeline: "2026",
+        role: "Full Stack Project",
+        liveUrl: "https://bizenst.vercel.app/",
+        imagesKey: "biznest",
+        highlights: [
+            "Built a dual-role platform for business owners and customers with a clear separation between management and storefront workflows.",
+            "Included real-time business dashboards, analytics, inventory management, order tracking, and expense monitoring for day-to-day operations.",
+            "Added customer-facing shopping, ratings and reviews, wishlist, delivery addresses, and support ticket flows.",
+            "Supported secure authentication, role-based access, and MongoDB persistence across web and mobile experiences.",
+        ],
+    },
+    {
+        id: 12,
+        slug: "biznest-mobile-business-app",
+        title: "BizNest - Mobile Business App",
+        category: "Mobile Apps",
+        shortDesc:
+            "Business-owner focused mobile app for managing operations with dashboard analytics, products, inventory, orders, customers, expenses, and support.",
+        tech: ["React Native", "Node.js", "MongoDB", "JWT", "Supabase"],
+        timeline: "2026",
+        role: "Business Owner App",
+        imagesKey: "bn",
+        hasMobileScreenshots: true,
+        highlights: [
+            "Built a dedicated business-owner flow with real-time dashboard metrics for revenue, orders, profit, and overall business health.",
+            "Implemented product and inventory management with add/update flows, pricing controls, and stock visibility.",
+            "Added customer and order management tools to track purchase history, payment status, fulfillment progress, and customer value.",
+            "Integrated expense tracking, analytics, support ticket handling, and role-based secure authentication for business operations.",
+        ],
+    },
+    {
+        id: 13,
+        slug: "biznest-shop-mobile-customer-app",
+        title: "BizNest Shop - Mobile Customer App",
+        category: "Mobile Apps",
+        shortDesc:
+            "Customer-side mobile shopping experience with store discovery, cart and checkout, ratings and reviews, order tracking, wishlist, and support.",
+        tech: ["React Native", "Node.js", "MongoDB", "JWT", "Supabase"],
+        timeline: "2026",
+        role: "Customer App",
+        imagesKey: "bns",
+        hasMobileScreenshots: true,
+        highlights: [
+            "Created customer storefront browsing with search and filtering to help users discover products quickly.",
+            "Implemented ratings and reviews, favorites/wishlist, and cart-to-checkout flows for a complete shopping journey.",
+            "Added order tracking with status updates, order history, and delivery address management.",
+            "Included customer support ticket creation and tracking with secure login and persistent cross-platform data.",
         ],
     },
 ];
