@@ -1,34 +1,37 @@
-# Jignesh Prajapati's Portfolio
+# Jignesh Prajapati Portfolio
 
-A modern, responsive portfolio website built with React and Vite, featuring UI/UX projects, skills showcase, and a contact form.
+Modern portfolio built with React and Vite (Rolldown), featuring project case studies, skills timeline, and contact form support.
 
-🌐 **Live Site:** [https://jigneshprotfolio.vercel.app/](https://jigneshprotfolio.vercel.app/)
+Live site: https://jigneshprotfolio.vercel.app/
 
-## Features
+## Highlights
 
-- ✨ Modern, responsive design with dark/light theme toggle
-- 🎨 Showcase of UI/UX projects with interactive modals
-- 📱 Mobile-optimized with smooth scrolling galleries
-- 📧 Contact form integration with EmailJS
-- 🎓 Education and skills sections
-- 🖼️ Project screenshots with mobile-friendly viewing
+- Dark/light theme toggle
+- Project listing + project details pages
+- Mobile screenshot-friendly galleries
+- Skills and experience sections with modal details
+- Contact form with EmailJS integration
 
-## Setup
+## Tech Stack
 
-### Install Dependencies
+- React 19
+- React Router
+- Framer Motion
+- Lucide React
+- Vite (via `rolldown-vite`)
+- Express (optional local server in `server/`)
+
+## Getting Started
+
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Configure Contact Form (EmailJS)
+2. Configure environment variables:
 
-The contact form uses EmailJS to send emails. Follow the detailed instructions in [EMAILJS_SETUP.md](./EMAILJS_SETUP.md) to set up your EmailJS account and configure the environment variables.
-
-Quick setup:
-1. Sign up at [emailjs.com](https://www.emailjs.com/)
-2. Create a service and template
-3. Add your credentials to `.env` file:
+Copy `.env.example` to `.env` and set your EmailJS credentials.
 
 ```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
@@ -36,43 +39,40 @@ VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-### Development
+Detailed setup: see `EMAILJS_SETUP.md`.
+
+3. Run development server:
 
 ```bash
 npm run dev
 ```
 
-### Build for Production
+## Available Scripts
 
-```bash
-npm run build
-```
-
-### Deploy to GitHub Pages
-
-1. Build the project: `npm run build`
-2. Push the `dist` folder to your `gh-pages` branch
-3. Or use GitHub Actions for automatic deployment
-
-## Tech Stack
-
-- **React 19** - UI framework
-- **Vite** - Build tool
-- **EmailJS** - Contact form service
-- **CSS3** - Styling with custom properties
+- `npm run dev` - Start Vite dev server
+- `npm run build` - Production build
+- `npm run preview` - Preview built app locally
+- `npm run lint` - Run ESLint
+- `npm run server` - Start local Express server with nodemon
 
 ## Project Structure
 
+```text
+.
+├── src/                  # Frontend source
+├── public/               # Static assets
+├── server/               # Optional backend endpoint(s)
+├── docs/                 # Static docs/deploy assets
+├── EMAILJS_SETUP.md
+├── TROUBLESHOOTING.md
+└── vite.config.js
 ```
-├── src/
-│   ├── App.jsx          # Main application component
-│   ├── App.css          # Styles
-│   └── assets/          # Images and logos
-├── server/               # Backend API (optional, for local dev)
-├── public/              # Static assets
-└── dist/                # Build output
-```
+
+## Notes
+
+- `dist/` is generated during build and is not committed.
+- Keep `.env` private. Use `.env.example` for shared config keys.
 
 ## License
 
-© 2025 Jignesh Prajapati. All rights reserved.
+For personal portfolio use.

@@ -1,101 +1,197 @@
-/* =====================================================
-   🌿 GLOBAL STYLES - Earthy Portfolio Theme
-   ===================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  font-family: "Outfit", "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
-
-  color-scheme: dark light;
-  color: #f5efe8;
-  background-color: #1a1f16;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }
 
-a {
-  font-weight: 500;
-  color: #99744a;
-  text-decoration: inherit;
-  transition: color 0.25s ease;
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-a:hover {
-  color: #dbc2a6;
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: rgba(56, 189, 248, 0.3);
+    color: #ffffff;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #1a1f16 0%, #0f1310 100%);
+    margin: 0;
+    overflow-x: hidden;
+    background: #0a0a0f;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  font-weight: 700;
+#root {
+    min-height: 100vh;
 }
 
-button {
-  border-radius: 12px;
-  border: 2px solid rgba(153, 116, 74, 0.3);
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: rgba(26, 31, 22, 0.8);
-  color: #f5efe8;
-  cursor: pointer;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+.theme-light {
+    background:
+        radial-gradient(ellipse at top left, rgba(14, 165, 233, 0.16), transparent 38%),
+        radial-gradient(ellipse at bottom right, rgba(217, 70, 239, 0.14), transparent 42%),
+        linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+    color: #0f172a;
 }
 
-button:hover {
-  border-color: #99744a;
-  background: linear-gradient(135deg, #99744a 0%, #b8936a 100%);
-  color: #fff;
+.theme-light [class*="bg-white/5"],
+.theme-light [class*="bg-white/10"] {
+    background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 3px solid rgba(153, 116, 74, 0.5);
-  outline-offset: 2px;
+.theme-light [class*="bg-[#020611]"],
+.theme-light [class*="bg-[#060913]"],
+.theme-light [class*="bg-[#0b0f1a]"],
+.theme-light [class*="bg-[#101723]"],
+.theme-light [class*="bg-[#111827]"] {
+    background-color: rgba(255, 255, 255, 0.94) !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #2a3024;
-    background-color: #f5efe8;
-  }
-
-  body {
-    background: linear-gradient(180deg, #f5efe8 0%, #efe4d5 100%);
-  }
-
-  a:hover {
-    color: #99744a;
-  }
-
-  button {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #2a3024;
-    border-color: rgba(65, 74, 55, 0.2);
-  }
+.theme-light [class*="bg-[#0a0a0f]"],
+.theme-light [class*="bg-[#0d1117]"],
+.theme-light [class*="bg-[#0f1624]"],
+.theme-light [class*="bg-black"] {
+    background-color: rgba(255, 255, 255, 0.94) !important;
 }
 
-/* Smooth scroll for the whole page */
-html {
-  scroll-behavior: smooth;
+.theme-light [class*="border-white/"] {
+    border-color: rgba(15, 23, 42, 0.22) !important;
 }
 
-/* Custom selection color */
-::selection {
-  background: rgba(153, 116, 74, 0.4);
-  color: inherit;
+.theme-light .text-white {
+    color: #0f172a !important;
+}
+
+.theme-light .text-cyan-100,
+.theme-light .text-cyan-200,
+.theme-light .text-cyan-300,
+.theme-light .text-cyan-400 {
+    color: #0f5e89 !important;
+}
+
+.theme-light [class*="text-cyan-200/70"],
+.theme-light [class*="text-cyan-200\/70"],
+.theme-light [class*="text-cyan-200/80"],
+.theme-light [class*="text-cyan-200\/80"] {
+    color: #0e7490 !important;
+    opacity: 1 !important;
+}
+
+.theme-light .text-fuchsia-100,
+.theme-light .text-fuchsia-200,
+.theme-light .text-fuchsia-300,
+.theme-light .text-fuchsia-400,
+.theme-light .text-purple-300,
+.theme-light .text-purple-400,
+.theme-light .text-pink-400 {
+    color: #9d2fae !important;
+}
+
+.theme-light .text-green-400,
+.theme-light .text-emerald-300 {
+    color: #0f8f68 !important;
+}
+
+.theme-light .text-gray-200,
+.theme-light .text-gray-300,
+.theme-light .text-gray-400,
+.theme-light .text-gray-500,
+.theme-light .text-gray-600 {
+    color: #334155 !important;
+}
+
+.theme-light .bg-clip-text.text-transparent {
+    background-image: linear-gradient(90deg, #0f172a, #0f5e89, #9d2fae) !important;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme-light .hover\\:text-white:hover {
+    color: #0f172a !important;
+}
+
+.theme-light [class*="bg-cyan-500/10"],
+.theme-light [class*="bg-cyan-300/10"] {
+    background-color: rgba(14, 165, 233, 0.14) !important;
+}
+
+.theme-light [class*="bg-cyan-500/8"],
+.theme-light [class*="bg-fuchsia-500/8"] {
+    background-color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.theme-light [class*="bg-fuchsia-500/10"],
+.theme-light [class*="bg-purple-500/10"],
+.theme-light [class*="bg-pink-500/10"] {
+    background-color: rgba(217, 70, 239, 0.13) !important;
+}
+
+.theme-light [class*="border-cyan-"],
+.theme-light [class*="hover:border-cyan-"] {
+    border-color: rgba(14, 165, 233, 0.34) !important;
+}
+
+.theme-light [class*="border-fuchsia-"],
+.theme-light [class*="border-purple-"],
+.theme-light [class*="border-pink-"] {
+    border-color: rgba(217, 70, 239, 0.32) !important;
+}
+
+.theme-light .text-accent-secondary {
+    color: #0f5e89 !important;
+}
+
+.theme-light input,
+.theme-light textarea {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    color: #0f172a !important;
+}
+
+.theme-light [class*="bg-emerald-400/10"] {
+    background-color: rgba(16, 185, 129, 0.16) !important;
+}
+
+.theme-light [class*="bg-rose-400/10"] {
+    background-color: rgba(244, 63, 94, 0.14) !important;
+}
+
+.theme-light .text-emerald-200,
+.theme-light .text-emerald-300 {
+    color: #047857 !important;
+}
+
+.theme-light .text-rose-200,
+.theme-light .text-rose-300 {
+    color: #be123c !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+    color: #64748b !important;
+}
+
+.theme-light .shadow-2xl,
+.theme-light .shadow-lg {
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.08), 0 10px 28px rgba(217, 70, 239, 0.06) !important;
+}
+
+.theme-light [class*="from-[#060910]"],
+.theme-light [class*="to-[#060910]"],
+.theme-light [class*="from-[#070b14]"],
+.theme-light [class*="via-[#060910]"],
+.theme-light [class*="from-[#0a0a0f]"],
+.theme-light [class*="to-[#0a0a0f]"],
+.theme-light [class*="from-[#0d1117]"],
+.theme-light [class*="to-[#0d1117]"],
+.theme-light [class*="via-[#0a0a0f]"] {
+    --tw-gradient-from: rgba(255, 255, 255, 0.7) var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
 }

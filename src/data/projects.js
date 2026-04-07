@@ -77,6 +77,7 @@ export const PROJECTS = [
         tech: ["Python", "Pandas", "Matplotlib", "Scikit-learn", "Jupyter"],
         timeline: "2025",
         role: "Data Analyst & ML Engineer",
+        githubUrl: "https://github.com/Jignesh5049/flipkart-mobile-sales-analytics",
         highlights: [
             "Analyzed Flipkart mobile sales dataset to uncover pricing trends, brand performance, and market insights.",
             "Created interactive visualizations for price distribution, specifications correlation, and sales patterns.",
@@ -95,6 +96,7 @@ export const PROJECTS = [
         timeline: "2025",
         role: "Product Designer",
         imagesKey: "fa",
+        githubUrl: "https://github.com/Jignesh5049",
         highlights: [
             "Structured navigation with hero search, destination filters, and newsletter capture.",
             "Crafted gradient hero, icon-driven services, and card-based travel packages for clarity.",
@@ -113,6 +115,7 @@ export const PROJECTS = [
         role: "UI/UX Designer",
         imagesKey: "fe",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049",
         highlights: [
             "Designed intuitive restaurant discovery with search, filters, ratings, and quick restaurant cards.",
             "Created seamless menu browsing experience with food categorization, descriptions, prices, and food images.",
@@ -132,6 +135,7 @@ export const PROJECTS = [
         role: "UI/UX Designer",
         imagesKey: "f",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049",
         highlights: [
             "Applied bold fruit palette, rounded cards, and pricing tags that feel instantly shoppable.",
             "Designed rating icons, filters, add-to-cart buttons, and a sticky bottom navigation.",
@@ -149,6 +153,7 @@ export const PROJECTS = [
         timeline: "2024",
         role: "Product Designer",
         imagesKey: "hc",
+        githubUrl: "https://github.com/Jignesh5049",
         highlights: [
             "Laid out hero signup form, category tabs, and carousel tutor highlights for effortless scanning.",
             "Created mentor cards with hover states plus top tutor rail for credibility.",
@@ -167,6 +172,7 @@ export const PROJECTS = [
         role: "Product Designer",
         imagesKey: "km",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049",
         highlights: [
             "Built flows for category browsing, product detail, farmer profiles, cart, and summary screens.",
             "Used clean white/green palette, dropdown navigation, and readable typography for trust.",
@@ -184,6 +190,7 @@ export const PROJECTS = [
         timeline: "2025",
         role: "Product Designer",
         imagesKey: "sm",
+        githubUrl: "https://github.com/Jignesh5049",
         highlights: [
             "Composed dark hero banner, membership CTA, and destination cards to feel luxurious.",
             "Blended location-based search, modern layouts, and smooth spacing for clarity.",
@@ -201,6 +208,7 @@ export const PROJECTS = [
         timeline: "2025",
         role: "Full Stack Developer",
         imagesKey: "vrh",
+        githubUrl: "https://github.com/Jignesh5049/vintage-rides-hub",
         highlights: [
             "Developed integrated platform for car rentals, purchases, and sales with seamless user workflows.",
             "Built ML-powered price prediction model for accurate vehicle valuations using historical data.",
@@ -220,6 +228,7 @@ export const PROJECTS = [
         role: "Flutter Developer",
         imagesKey: "et",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049/expense-tracker-flutter",
         highlights: [
             "Built a clean and intuitive mobile app for tracking daily expenses with category-based organization.",
             "Implemented swipe-to-delete gesture for seamless expense removal with undo functionality.",
@@ -239,6 +248,7 @@ export const PROJECTS = [
         role: "Flutter Developer",
         imagesKey: "qu",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049/flutter-quiz-master",
         highlights: [
             "Designed an engaging quiz interface with multiple-choice questions focused on Flutter framework concepts.",
             "Implemented comprehensive result screen showing score, percentage, and detailed answer review.",
@@ -257,6 +267,7 @@ export const PROJECTS = [
         timeline: "2026",
         role: "Full Stack Project",
         liveUrl: "https://bizenst.vercel.app/",
+        githubUrl: "https://github.com/Jignesh5049/biznest",
         imagesKey: "biznest",
         highlights: [
             "Built a dual-role platform for business owners and customers with a clear separation between management and storefront workflows.",
@@ -277,6 +288,7 @@ export const PROJECTS = [
         role: "Business Owner App",
         imagesKey: "bn",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049/biznest-mobile",
         highlights: [
             "Built a dedicated business-owner flow with real-time dashboard metrics for revenue, orders, profit, and overall business health.",
             "Implemented product and inventory management with add/update flows, pricing controls, and stock visibility.",
@@ -296,6 +308,7 @@ export const PROJECTS = [
         role: "Customer App",
         imagesKey: "bns",
         hasMobileScreenshots: true,
+        githubUrl: "https://github.com/Jignesh5049/biznest-shop-mobile",
         highlights: [
             "Created customer storefront browsing with search and filtering to help users discover products quickly.",
             "Implemented ratings and reviews, favorites/wishlist, and cart-to-checkout flows for a complete shopping journey.",

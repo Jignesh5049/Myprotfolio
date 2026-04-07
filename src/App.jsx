@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
+import Experience from "./pages/Experience.jsx";
+import About from "./pages/About.jsx";
 import ProjectDetails from "./pages/ProjectDetails.jsx";
 
 class ErrorBoundary extends React.Component {
@@ -48,8 +49,10 @@ function App() {
                 <Routes>
                     <Route element={<Layout />}>
                         <Route index element={<Home />} />
+                        <Route path="about" element={<About />} />
                         <Route path="projects" element={<Projects />} />
                         <Route path="projects/:slug" element={<ProjectDetails />} />
+                        <Route path="experience" element={<Experience />} />
                     </Route>
                 </Routes>
             </ErrorBoundary>

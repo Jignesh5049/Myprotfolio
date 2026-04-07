@@ -10,9 +10,37 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+coverage
+.cache
+.eslintcache
+.parcel-cache
+.turbo
+.next
+.nuxt
+.svelte-kit
+*.tsbuildinfo
 *.local
 .env
 .env.local
+.env.*.local
+
+# Runtime / process files
+*.pid
+*.pid.lock
+
+# Build outputs
+build
+tmp
+temp
+
+# VS Code and IDE
+.history/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
 
 # Editor directories and files
 .vscode/*
