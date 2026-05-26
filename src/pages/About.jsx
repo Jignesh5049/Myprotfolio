@@ -108,18 +108,24 @@ function About() {
                         <p className="mb-1 text-xs uppercase tracking-[0.14em] text-cyan-300" style={{ fontFamily: "Space Grotesk, sans-serif" }}>Education</p>
                         <h3 className="font-display text-xl leading-tight text-white sm:text-[1.4rem]">Academic Background</h3>
                         <div className="mt-4 space-y-4">
-                            <div className="rounded-xl border border-cyan-300/20 bg-cyan-500/8 p-4 sm:p-5">
-                                <p className="text-sm font-semibold leading-6 text-white">{topEducation.degree}</p>
-                                <p className="mt-1 text-sm leading-6 text-gray-300">{topEducation.institution}</p>
-                                <p className="text-xs leading-5 text-gray-400">{topEducation.timeline}</p>
-                                <p className="mt-2 text-sm leading-6 text-cyan-200">{topEducation.stats[0]}</p>
-                            </div>
-                            <div className="rounded-xl border border-fuchsia-300/20 bg-fuchsia-500/8 p-4 sm:p-5">
-                                <p className="text-sm font-semibold leading-6 text-white">{schoolEducation.degree}</p>
-                                <p className="mt-1 text-sm leading-6 text-gray-300">{schoolEducation.institution}</p>
-                                <p className="text-xs leading-5 text-gray-400">{schoolEducation.timeline}</p>
-                                <p className="mt-2 text-sm leading-6 text-fuchsia-200">{schoolEducation.stats.join(" | ")}</p>
-                            </div>
+                            {EDUCATION.map((edu) => (
+                                <div key={edu.id} className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5">
+                                    {edu.logo && (
+                                        <img src={edu.logo} alt={edu.logoAlt || edu.institution} className="h-12 w-12 flex-shrink-0 object-contain" />
+                                    )}
+                                    <div>
+                                        <p className="text-sm font-semibold leading-6 text-white">{edu.degree}</p>
+                                        <p className="mt-1 text-sm leading-6 text-gray-300">{edu.institution}</p>
+                                        {edu.university && (
+                                            <p className="mt-0.5 text-sm leading-6 text-gray-300">{edu.university}</p>
+                                        )}
+                                        <p className="text-xs leading-5 text-gray-400">{edu.timeline}</p>
+                                        {edu.stats && edu.stats.length > 0 && (
+                                            <p className="mt-2 text-sm leading-6 text-cyan-200">{edu.stats.join(" | ")}</p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </motion.div>
 

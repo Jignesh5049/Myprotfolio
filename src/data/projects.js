@@ -68,6 +68,63 @@ export const PROJECT_CATEGORIES = [
 
 export const PROJECTS = [
     {
+        id: 11,
+        slug: "biznest-business-enablement-platform",
+        title: "Buzinest App",
+        category: "Web Development",
+        shortDesc:
+            "A full-stack business enablement platform for small and home-based businesses with dashboards, inventory control, customer management, storefront features, and support tools.",
+        tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+        timeline: "2026",
+        role: "Full Stack Project",
+        liveUrl: "https://bizenst.vercel.app/",
+        githubUrl: "https://github.com/Jignesh5049/biznest",
+        imagesKey: "biznest",
+        highlights: [
+            "Built a dual-role platform for business owners and customers with a clear separation between management and storefront workflows.",
+            "Included real-time business dashboards, analytics, inventory management, order tracking, and expense monitoring for day-to-day operations.",
+            "Added customer-facing shopping, ratings and reviews, wishlist, delivery addresses, and support ticket flows.",
+            "Supported secure authentication, role-based access, and MongoDB persistence across web and mobile experiences.",
+        ],
+    },
+    {
+        id: 8,
+        slug: "vintage-rides-hub",
+        title: "Vintage Riders Hub",
+        category: "Web Development",
+        shortDesc:
+            "Full-stack car marketplace with rental, buying, selling, and price prediction features powered by machine learning.",
+        tech: ["React", "Python", "Flask", "ML", "Data Analytics"],
+        timeline: "2025",
+        role: "Full Stack Developer",
+        imagesKey: "vrh",
+        githubUrl: "https://github.com/Jignesh5049/vintage-rides-hub",
+        highlights: [
+            "Developed integrated platform for car rentals, purchases, and sales with seamless user workflows.",
+            "Built ML-powered price prediction model for accurate vehicle valuations using historical data.",
+            "Implemented search, filtering, and booking modals with real-time inventory management.",
+            "Created responsive React UI with context API for state management and dynamic car listings.",
+        ],
+    },
+    {
+        id: 5,
+        slug: "hobbyclass-learning",
+        title: "Hobby Class",
+        category: "UI/UX",
+        shortDesc:
+            "Exploration platform for art, dance, music, and tech classes with tutor discovery and quick signup.",
+        tech: ["Figma", "Component Library", "Web"],
+        timeline: "2024",
+        role: "Product Designer",
+        imagesKey: "hc",
+        githubUrl: "https://github.com/Jignesh5049",
+        highlights: [
+            "Laid out hero signup form, category tabs, and carousel tutor highlights for effortless scanning.",
+            "Created mentor cards with hover states plus top tutor rail for credibility.",
+            "Used a calm blue palette, airy spacing, and scroll-friendly sections to keep focus on content.",
+        ],
+    },
+    {
         id: 1,
         slug: "flipkart-mobile-sales-analytics",
         title: "Flipkart Mobile Sales Data Visualization & Price Prediction",

@@ -1,5 +1,6 @@
 import cvmLogo from "../assets/cvm.png";
 import jjisLogo from "../assets/jjis.png";
+import kjLogo from "../assets/K. J Thakker.png";
 
 export const EXPERIENCE = [
     {
@@ -8,7 +9,7 @@ export const EXPERIENCE = [
         company: "TenUp Software Service",
         companyUrl: "https://www.tenupsoft.com/",
         location: "Vadodara",
-        timeline: "Jan 2026 - Present",
+        timeline: "January 2026 - April 2026",
         responsibilities: [
             "Developing cross-platform mobile applications using Flutter and Dart framework.",
             "Building responsive UI components and implementing state management solutions.",
@@ -22,7 +23,7 @@ export const EXPERIENCE = [
         company: "Venom Technology",
         companyUrl: "https://www.venomtechnologies.in/",
         location: "Anand",
-        timeline: "2025",
+        timeline: "(15 days) 2025",
         responsibilities: [
             "Created wireframes, modern UI screens, and interactive prototypes using Figma.",
             "Worked on layout structuring, component design, spacing systems, and user flow optimization.",
@@ -41,6 +42,10 @@ export const SKILL_GROUPS = [
         items: ["Figma", "UI/UX", "Wireframing", "Prototyping"],
     },
     {
+        title: "Mobile Development",
+        items: ["Flutter", "Dart", "React Native"],
+    },
+    {
         title: "Data + Others",
         items: ["Python Basics", "Data Analysis", "Charts & Reports"],
     },
@@ -53,7 +58,7 @@ export const EDUCATION = [
         institution: "Madhuben & Bhanubhai Patel Institute of Technology",
         university: "CVM University, V.V. Nagar",
         timeline: "2022 - 2026",
-        stats: ["CGPA: 7.15 / 10"],
+        stats: ["CGPA: 7.33 / 10"],
         logo: cvmLogo,
         logoAlt: "CVM University logo",
     },
@@ -66,11 +71,20 @@ export const EDUCATION = [
         logo: jjisLogo,
         logoAlt: "Jay Jalaram International School logo",
     },
+    {
+        id: 3,
+        degree: "KG to 6 Standard",
+        institution: "Smt. K. J Thakker Balshala",
+        timeline: "2008 - 2015",
+        stats: [],
+        logo: kjLogo,
+        logoAlt: "K. J Thakker Balshala logo",
+    },
 ];
 
 export const ABOUT_COPY = {
     intro:
-        "Aspiring Python Developer with hands-on experience in building data-driven and machine learning based projects. I combine technical expertise in web development, UI/UX design, and Python to create impactful digital solutions.",
+        "Aspiring Mobile Developer with hands-on experience in building mobile apps, UI/UX design, and web projects. I combine technical expertise in mobile development and UI to create impactful digital solutions.",
     background:
         "From designing intuitive mobile interfaces to developing full-stack applications with ML-powered features, I am driven by the challenge of solving real-world problems through technology.",
     location: "Anand, Gujarat, India",
